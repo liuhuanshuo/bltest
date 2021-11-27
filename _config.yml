@@ -1,0 +1,73 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+#######################################################################################
+# Book settings
+title                       : ""  # The title of the book. Will be placed in the left navbar.
+author                      : 刘早起@<a href="https://files.mdnice.com/user/3609/09d05271-d556-4600-b66e-6be76f5a9138.jpg" target="_blank" >微信公众号:早起Python</a>
+copyright                   : "2020-2021"  # Copyright year to be placed in the footer
+logo                        : logo.png  # A path to the book logo
+email                       : "huanshuo0801@gmail.com"
+exclude_patterns            : ['README.md']  # Patterns to skip when building the book. Can be glob-style (for example "*skip.ipynb")
+only_build_toc_files          : true
+#######################################################################################
+# Execution settings
+execute:
+  execute_notebooks         : auto  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache                     : ""  # A path to the jupyter cache that will be used to store execution artifacs. Defaults to `_build/.jupyter_cache/`
+  exclude_patterns:
+    - 'doc/chapter1/数据存储.ipynb'
+#######################################################################################
+#交互式代码
+launch_buttons:
+  notebook_interface        : "classic"  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : "https://mybinder.org"  # The URL of the BinderHub (for example, https://mybinder.org)
+  thebe                     : true
+
+repository:
+  url                       : https://github.com/liuhuanshuo/zaoqi-book  # Online location of your book
+  branch                    : main # Which branch of the repository should be used when creating links (optional)
+  path_to_book              : ""
+#######################################################################################
+# HTML-specific settings
+html:
+  comments:
+    hypothesis: true
+  favicon                   : "images/logo-square.svg"  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages.
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : false  # Whether to include your home page in the left Navigation Bar
+#######################################################################################
+# Advanced and power-user settings
+parse:
+  myst_substitutions:
+      sub3: My _global_ value!
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+#######################################################################################
+sphinx:
+  config:
+    nb_custom_formats:
+      .Rmd:
+        - jupytext.reads
+        - fmt: Rmd
+
+extra_extensions:
+    - sphinx_click.ext
+    - sphinx_inline_tabs
+    - sphinxext.rediraffe
+    - sphinx_proof
+    - myst_nb
+    - sphinx_thebe

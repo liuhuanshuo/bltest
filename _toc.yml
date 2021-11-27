@@ -1,0 +1,103 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: 指引 📌
+  chapters:
+  - file: doc/指引/使用说明
+  - file: doc/指引/在线执行
+
+
+- caption: 图解Pandas 📖
+  chapters:
+#######################################################################################
+#chapt1
+  - title: 数据加载与存储
+    file: doc/chapter1/chapt1
+    sections:
+    - title: 常见格式读取
+      file: doc/chapter1/常见文件读取
+      sections:
+      - title: 读取 Excel
+        file: doc/chapter1/读取Excel文件
+      - title: 读取 TXT
+        file: doc/chapter1/读取TXT
+      - title: 读取 JSON
+        file: doc/chapter1/读取JSON
+      - title: 读取 SQL
+        file: doc/chapter1/读取SQL
+      - title: 读取 HDF5
+        file: doc/chapter1/读取HDF5
+      - title: 读取网页
+        file: doc/chapter1/读取网页
+      - title: 读取剪贴板
+        file: doc/chapter1/读取剪贴板
+
+    - title: 常见数据创建
+      file: doc/chapter1/常见数据创建
+      sections:
+      - title: 从列表创建
+        file: doc/chapter1/从列表创建
+      - title: 从字典创建
+        file: doc/chapter1/从字典创建
+      - title: 从集合创建
+        file: doc/chapter1/从集合创建
+    - title: 数据存储
+      file: doc/chapter1/数据存储
+#######################################################################################
+#chapt2
+  - title: 数据预览与预处理
+    file: doc/chapter2/chapt2
+    sections:
+      - title: 数据信息预览
+        file: doc/chapter2/数据预览
+      - title: 缺失值检查与处理
+        file: doc/chapter2/缺失值检查与处理
+        sections:
+          - title: 缺失值检查
+            file: doc/chapter2/缺失值检查
+          - title: 缺失值处理
+            file: doc/chapter2/缺失值处理
+      - title: 重复值检查与处理
+        file: doc/chapter2/重复值检查与处理
+#######################################################################################
+#chapt2 补充
+  - title: 数据统计
+    file: doc/chapter2-2/chapt2-2
+#######################################################################################
+#chapt3
+  - title: 数据修改与筛选
+    file: doc/chapter3/chapt3
+#######################################################################################
+#chapt4
+  - title: 数据分组与聚合
+    file: doc/chapter4/chapt4
+#######################################################################################
+#chapt5
+  - title: 数据透视与合并
+    file: doc/chapter5/chapt5
+#######################################################################################
+#chapt6
+  - title: 金融数据与时间处理
+    file: doc/chapter6/chapt6
+#######################################################################################
+#chapt7
+
+  - title: 数据可视化
+    file: doc/chapter7/chapt7
+#######################################################################################
+#chapt8
+  - title: 个性化显示
+    file: doc/chapter8/chapt8
+#######################################################################################
+#chapt9
+  - title: 更多未提及操作
+    file: doc/chapter9/chapt9
+#######################################################################################
+#chapt10
+- caption: 彩蛋 🎉
+  chapters:
+  - title: Jupyter Notebook 进阶技巧
+    file: doc/chapter10/chapt10
